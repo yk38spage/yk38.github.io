@@ -147,11 +147,11 @@
             <br><input type="text" id="quiz1">
             <br><br>2. quiz notu (QUIZ 2 - Listening):
             <br><input type="text" id="quiz2">
-            <br><br>3. quiz notu (QUIZ 2 - Reading):
+            <br><br>3. quiz notu (QUIZ 3 - Reading):
             <br><input type="text" id="quiz3">
-            <br><br>4. quiz notu (QUIZ 2 - CB):
+            <br><br>4. quiz notu (QUIZ 4 - CB):
             <br><input type="text" id="quiz4">
-            <br><br>5. quiz notu (QUIZ 2 - Outside Reading):
+            <br><br>5. quiz notu (QUIZ 5 - Outside Reading):
             <br><input type="text" id="quiz5">
             <br><br>Yazma (In-Class Writing) notu:
             <br><input type="text" id="writ">
@@ -224,7 +224,7 @@
 
                 if (!isNaN(sum)) {
                     document.getElementById("genelort").innerHTML="<br><b>Genel ortalamanız:</b> "+sum;
-                    if (parseFloat(sum)>70) {
+                    if (parseFloat(sum)>=70) {
                         document.getElementById("gectikaldi").innerHTML='<br><b>Geçtiniz!</b> Varsa sonraki kurunuzdan, yoksa kendi bölümünüzden devam edeceksiniz. :)<br><br>Yeni bir hesaplama yapmak ister misiniz?<br><button onClick="window.location.reload();">BURAYA TIKLAYIN</button>';
                     } else {
                         document.getElementById("gectikaldi").innerHTML='<br><b>Kaldınız.</b> Kur tekrarı yapmanız gerek. :(<br><br>Yeni bir hesaplama yapmak ister misiniz?<br><button onClick="window.location.reload();">BURAYA TIKLAYIN</button>';
@@ -242,7 +242,8 @@
                 <a href="https://www.youtube.com/@yigithankarabel" title="YouTube - Yiğithan Karabel" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                 <a href="https://www.instagram.com/yigithankarabel" title="Instagram - Yiğithan Karabel" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://x.com/yigithankarabel" title="X - Yiğithan Karabel" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://discord.gg/uFfntxw9bt" title="Discord - yk38's Server" target="_blank"><i class="fa-brands fa-discord"></i></a>  
+                <a href="https://discord.gg/uFfntxw9bt" title="Discord - yk38's Server" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/yk38spage" title="GitHub - yk38spage" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </footer>
     </body>
