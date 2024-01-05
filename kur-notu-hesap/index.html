@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<!--
+    
+    This file is part of Kur Notu Hesap.
+
+    Kur Notu Hesap is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+    Kur Notu Hesap is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along with Kur Notu Hesap. If not, see <https://www.gnu.org/licenses/>.
+
+-->
+<html lang="tr-TR">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Language" content="tr">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Erciyes Üniversitesi YDYO Kur Notu Hesaplama</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <style>
+            body {
+                font-family: "Montserrat", sans-serif;
+            }
+
+            .content {
+                padding-right: 200px;
+                padding-left: 200px;
+            }
+
+            .header {
+                overflow: hidden;
+                background-color: #f1f1f1;
+                padding: 20px 10px;
+                padding-right: 200px;
+                padding-left: 200px;
+            }
+            .header a {
+                float: left;
+                color: #000000;
+                text-align: center; /**/
+                padding: 12px;
+                text-decoration: none;
+                font-size: 18px;
+                line-height: 25px;
+                border-radius: 8px; /**/
+                margin: 2px;
+            }
+
+            .header a.logo {
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .header-right a:hover {
+                background-color: #dbdbdb;
+            }
+
+            .header a.active {
+                background-color: #081a24;
+                color: #ffffff;
+            }
+
+            .header-right {
+                float: right;
+            }
+
+            @media screen and (max-width: 850px) {
+                .header a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+                .header-right {
+                    float: none;
+                }
+
+                .header, .content {
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
+                input[type=text] {
+                    width: 100%;
+                }
+            }
+
+            input[type=text] {
+                padding: 10px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+
+            button {
+                border: none;
+                border-radius: 8px;
+                background-color: #081a24;
+                color: #ffffff;
+                font-size: 16px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+                padding: 16px 32px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            footer {
+                margin-top: 32px;
+                text-align: center;
+                padding: 8px;
+                background-color: #081a24;
+                color: #ffffff;
+            }
+            footer a {
+                color: #fff;
+            }
+            .footer-social a {
+                text-decoration: none;
+                font-size: 26px;
+                color: #ffffff;
+                margin: 1px;
+                padding: 4px;
+            }
+
+            .footer-social a:hover {
+                background-color: #363738;
+                border-radius: 4px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <a href="#" class="logo">yk38</a>
+            <div class="header-right">
+                <a class="active" href="#">Kur Notu Hesaplama</a>
+                <a href="https://github.com/yk38spage">GitHub</a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Erciyes Üniversitesi Yabancı Diller Yüksekokulu - Kur Notu Hesaplama</h1>
+            <h3>Bu site, Erciyes Üniversitesi hazırlık öğrencilerinin kur notlarını hesaplamasına ve kuru geçip geçmediklerini öğrenmelerine yardımcı olur.</h3>
+            <h4>1. aşama - Kur içi (In-Class) notu hesaplama:</h4>
+            1. quiz notu (QUIZ 1 - CB):
+            <br><input type="text" id="quiz1">
+            <br><br>2. quiz notu (QUIZ 2 - Listening):
+            <br><input type="text" id="quiz2">
+            <br><br>3. quiz notu (QUIZ 2 - Reading):
+            <br><input type="text" id="quiz3">
+            <br><br>4. quiz notu (QUIZ 2 - CB):
+            <br><input type="text" id="quiz4">
+            <br><br>5. quiz notu (QUIZ 2 - Outside Reading):
+            <br><input type="text" id="quiz5">
+            <br><br>Yazma (In-Class Writing) notu:
+            <br><input type="text" id="writ">
+            <br><br>Ders içi performans (In-Class Performance) notu:
+            <br><input type="text" id="perf">
+            <br><br>Video proje (Video Project Assignment) notu:
+            <br><input type="text" id="vid">
+            <br><br>Online Practise notu:
+            <br><input type="text" id="onl">
+            <br><br>
+            <h4>2. aşama - Kur bitirme sınavı (Level Exit Exam) notu hesaplama:</h4>
+            Use of English notu:
+            <br><input type="text" id="exit_use">
+            <br><br>Yazma (Writing) notu:
+            <br><input type="text" id="exit_writ">
+            <br><br>Dinleme (Listening) notu:
+            <br><input type="text" id="exit_lis">
+            <br><br>Okuma (Reading) notu:
+            <br><input type="text" id="exit_read">
+            <br><br>Konuşma notu:
+            <br><input type="text" id="exit_speak">
+            <br><br><button onclick="hesap()">HESAPLA</button>
+            <h3>Sonuçlar:</h3>
+            <div id="quizsonuc">Henüz sonuç girilmedi.</div>
+            <div id="quizkazanilan"></div>
+            <div id="inclasstoplam"></div>
+            <div id="lvlexittoplam"></div>
+            <div id="genelort"></div>
+            <div id="gectikaldi"></div>
+        </div>
+        <script>
+
+            function hesap() {
+                var q1=document.getElementById("quiz1").value;
+                var q2=document.getElementById("quiz2").value;
+                var q3=document.getElementById("quiz3").value;
+                var q4=document.getElementById("quiz4").value;
+                var q5=document.getElementById("quiz5").value;
+
+                var qsonuc=(parseFloat(q1)+parseFloat(q2)+parseFloat(q3)+parseFloat(q4)+parseFloat(q5))/5;
+                if (!isNaN(qsonuc)) {
+                    document.getElementById("quizsonuc").innerHTML="Quiz ortalamanız: "+qsonuc;
+                    document.getElementById("quizkazanilan").innerHTML="Quizlerden kazandığınız puan: "+parseFloat(qsonuc)/5;
+                }
+
+                var w=(document.getElementById("writ").value)*8/100;
+                var icp=(document.getElementById("perf").value)*7/100;
+                var vd=(document.getElementById("vid").value)/20;
+                var on=(document.getElementById("onl").value)/20;
+
+                var inclass=parseFloat(qsonuc)/5+parseFloat(w)+parseFloat(icp)+parseFloat(vd)+parseFloat(on)
+
+
+                if (!isNaN(inclass)) {
+                    document.getElementById("inclasstoplam").innerHTML="<br><b>Kur içi (In-Class) notunuz:</b> "+inclass;
+                }
+
+                var exu=(document.getElementById("exit_use").value)*15/100;
+                var exw=(document.getElementById("exit_writ").value)/10;
+                var exl=(document.getElementById("exit_lis").value)/10;
+                var exr=(document.getElementById("exit_read").value)/10;
+                var exs=(document.getElementById("exit_speak").value)/10;
+
+                var ex=parseFloat(exu)+parseFloat(exw)+parseFloat(exl)+parseFloat(exr)+parseFloat(exs);
+                var sum=parseFloat(inclass)+parseFloat(ex);
+
+                if (!isNaN(ex)) {
+                    document.getElementById("lvlexittoplam").innerHTML="<b>Kur bitirme (Level Exit) notunuz:</b> "+ex;
+                }
+
+                if (!isNaN(sum)) {
+                    document.getElementById("genelort").innerHTML="<br><b>Genel ortalamanız:</b> "+sum;
+                    if (parseFloat(sum)>70) {
+                        document.getElementById("gectikaldi").innerHTML='<br><b>Geçtiniz!</b> Varsa sonraki kurunuzdan, yoksa kendi bölümünüzden devam edeceksiniz. :)<br><br>Yeni bir hesaplama yapmak ister misiniz?<br><button onClick="window.location.reload();">BURAYA TIKLAYIN</button>';
+                    } else {
+                        document.getElementById("gectikaldi").innerHTML='<br><b>Kaldınız.</b> Kur tekrarı yapmanız gerek. :(<br><br>Yeni bir hesaplama yapmak ister misiniz?<br><button onClick="window.location.reload();">BURAYA TIKLAYIN</button>';
+                    }
+                }
+            }
+        </script>
+        <footer>
+            <div class="footer-main">
+                <p>Bu web sitesinin Erciyes Üniversitesi ile <b>hiçbir bağlantısı yoktur</b>.<p>
+                <p>GNU Genel Kamu Lisansı sürüm 3 lisansının şartlarına tabidir. Daha fazla bilgi almak için lütfen <a href=license.html>lisans sözleşmesini okuyun</a>.</p>
+                <p>Copyright © Yiğithan Karabel yk38</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@yigithankarabel" title="YouTube - Yiğithan Karabel" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/yigithankarabel" title="Instagram - Yiğithan Karabel" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/yigithankarabel" title="X - Yiğithan Karabel" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://discord.gg/uFfntxw9bt" title="Discord - yk38's Server" target="_blank"><i class="fa-brands fa-discord"></i></a>  
+            </div>
+        </footer>
+    </body>
+</html>
