@@ -154,35 +154,35 @@
             <h3>Bu site, Erciyes Üniversitesi hazırlık öğrencilerinin kur notlarını hesaplamasına ve kuru geçip geçmediklerini öğrenmelerine yardımcı olur.</h3>
             <h4>1. aşama - Kur içi (In-Class) notu hesaplama:</h4>
             1. quiz notu (QUIZ 1 - CB):
-            <br><input type="text" id="quiz1">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="quiz1">
             <br><br>2. quiz notu (QUIZ 2 - Listening):
-            <br><input type="text" id="quiz2">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="quiz2">
             <br><br>3. quiz notu (QUIZ 3 - Reading):
-            <br><input type="text" id="quiz3">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="quiz3">
             <br><br>4. quiz notu (QUIZ 4 - CB):
-            <br><input type="text" id="quiz4">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="quiz4">
             <br><br>5. quiz notu (QUIZ 5 - Outside Reading):
-            <br><input type="text" id="quiz5">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="quiz5">
             <br><br>Yazma (In-Class Writing) notu:
-            <br><input type="text" id="writ">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="writ">
             <br><br>Ders içi performans (In-Class Performance) notu:
-            <br><input type="text" id="perf">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="perf">
             <br><br>Video proje (Video Project Assignment) notu:
-            <br><input type="text" id="vid">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="vid">
             <br><br>Online Practise notu:
-            <br><input type="text" id="onl">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="onl">
             <br><br>
             <h4>2. aşama - Kur bitirme sınavı (Level Exit Exam) notu hesaplama:</h4>
             Use of English notu:
-            <br><input type="text" id="exit_use">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="exit_use">
             <br><br>Yazma (Writing) notu:
-            <br><input type="text" id="exit_writ">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="exit_writ">
             <br><br>Dinleme (Listening) notu:
-            <br><input type="text" id="exit_lis">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="exit_lis">
             <br><br>Okuma (Reading) notu:
-            <br><input type="text" id="exit_read">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="exit_read">
             <br><br>Konuşma (Speaking) notu:
-            <br><input type="text" id="exit_speak">
+            <br><input onkeyup="this.value=this.value.replace(',','.')" type="text" id="exit_speak">
             <br><br><button onclick="hesap()">HESAPLA</button>
             <h3>Sonuçlar:</h3>
             <div id="quizsonuc">Henüz sonuç girilmedi.</div>
