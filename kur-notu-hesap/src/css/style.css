@@ -1,0 +1,365 @@
+/*
+
+This file is part of yk38spage.github.io.
+
+yk38spage.github.io is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+yk38spage.github.io is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with yk38spage.github.io. If not, see <https://www.gnu.org/licenses/>.
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    top: 0;
+    background-color: #081a24;
+    padding: 20px 350px;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+/* .sticky-hdr {
+    position: fixed;
+    top: 0;
+    width: 100%;
+} */
+
+header a {
+    text-decoration: none;
+    color: #dcdcdc;
+    transition: 0.2s;
+    align-self: center;
+}
+
+header a.logo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+}
+
+header nav a {
+    margin-left: 22px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+.nav-open, .nav-close {
+    display: none;
+    color: #dcdcdc;
+    cursor: pointer;
+}
+
+.nav-open {
+    font-size: 30px;
+}
+
+.nav-close {
+    font-size: 36px;
+}
+
+
+.slide {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    transition: 0.5s;
+}
+
+.content {
+    margin: 40px 350px;
+    transition: 0.2s;
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    margin-bottom: 15px;
+}
+
+.content h1 {
+    font-size: 28px;
+}
+
+.content h2 {
+    font-size: 23px;
+}
+
+.content h3 {
+    font-size: 20px;
+}
+
+.content dt {
+    margin-bottom: 8px;
+}
+.content dd {
+    margin-bottom: 16px;
+}
+
+input[type="number"] {
+    width: 300px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    padding: 6px 8px;
+    transition: 0.2s;
+}
+
+.success {
+    color: #fff;
+    width: 100%;
+    background-color: #138819;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.btn {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    background-color: #081a24;
+    color: #fff;
+    transition: 0.2s;
+    margin-bottom: 20px;
+    border: 2px solid #204d66;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #133546;
+    border-color: #265670;
+}
+
+hr.spr-btn {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+table {
+    text-align: right;
+}
+
+footer {
+    background-color: #081a24;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+    
+}
+
+footer .row {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 100px;
+    transition: 0.2s;
+}
+
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 21px;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #eba206;
+    height: 3px;
+    box-sizing: border-box;
+    width: 65px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li, .footer-col a {
+    color: #dcdcdc;
+    margin-bottom: 3px;
+}
+
+.footer-col a {
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+.footer-social i {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff36;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.footer-social i:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+footer .copyright {
+    font-size: 14px;
+    padding: 20px 5px;
+    color: #dcdcdc;
+    text-align: center;
+}
+
+footer .copyright a {
+    color: #dcdcdc;
+    transition: 0.2s;
+}
+
+footer .copyright a:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 1670px) {
+    header {
+        padding: 20px 250px;
+    }
+    .content {
+        margin: 40px 250px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    header {
+        padding: 20px 150px;
+    }
+    .content {
+        margin: 40px 150px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    header {
+        padding: 20px 70px;
+    }
+    .content {
+        margin: 40px 70px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        padding: 20px 15px;
+    }
+    .content {
+        margin: 40px 15px;
+    }
+
+    input[type="number"] {
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (min-width: 1031px) {
+    .footer-col {
+        max-width: 30%;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    footer .row {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    footer .col {
+        max-width: 100%;
+    }
+
+    footer .footer-col ul {
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    footer .copyright {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header nav {
+        display: block;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 270px;
+        background-color: #081a24;
+        height: 100%;
+        z-index: 9999;
+        box-shadow: -2px -2px 8px #081a24;
+    }
+
+    .nav-open, .nav-close {
+        display: block;
+    }
+
+    .nav-close {
+        margin: 8px 16px;
+        text-align: right;
+    }
+
+    header nav {
+        font-size: 20px;
+    }
+    
+    header nav a {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 8px 16px;
+        border-radius: 8px;
+        
+    }
+
+    header nav a:hover {
+        background-color: #15394d;
+    }
+
+    .nav-close i {
+        right: 0;
+    }
+
+    button {
+        float: right;
+    }
+    
+    
+}
