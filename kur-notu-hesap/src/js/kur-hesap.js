@@ -6,6 +6,9 @@
 //
 // You should have received a copy of the GNU General Public License along with yk38spage.github.io. If not, see <https://www.gnu.org/licenses/>.
 
+function replaceDotComma(InsertedData) {
+    return InsertedData.toString().replace(/\./g, ',');
+}
 
 function hesap() {
     var q1=document.getElementById("quiz1").value;
@@ -16,8 +19,8 @@ function hesap() {
 
     var qsonuc=(parseFloat(q1)+parseFloat(q2)+parseFloat(q3)+parseFloat(q4)+parseFloat(q5))/5;
 
-    var w=(document.getElementById("writ").value)*8/100;
-    var icp=(document.getElementById("perf").value)*7/100;
+    var w=(document.getElementById("writ").value)/10;
+    var icp=(document.getElementById("perf").value)/20;
     var vd=(document.getElementById("vid").value)/20;
     var on=(document.getElementById("onl").value)/20;
 
@@ -33,14 +36,14 @@ function hesap() {
     var sum=parseFloat(inclass)+parseFloat(ex);
 
     if (!isNaN(sum)) {
-        document.getElementById("summary").innerHTML='<p>Quiz ortalamanız: '+qsonuc+'</p><p>Quizlerden kazandığınız puan: '+parseFloat(qsonuc)/5+'</p><br><p><b>Kur içi (In-Class) notunuz:</b> '+inclass+'</p><p><b>Kur bitirme (Level Exit) notunuz:</b> '+ex+"</p><br><p><b>Genel ortalamanız:</b> "+sum+"</p>";
+        document.getElementById("summary").innerHTML='<p>Quiz ortalamanız: '+replaceDotComma(qsonuc)+'</p><p>Quizlerden kazandığınız puan: '+replaceDotComma(parseFloat(qsonuc)/5)+'</p><br><p><b>Kur içi (In-Class) notunuz:</b> '+replaceDotComma(inclass)+'</p><p><b>Kur bitirme (Level Exit) notunuz:</b> '+replaceDotComma(ex)+"</p><br><p><b>Genel ortalamanız:</b> "+replaceDotComma(sum)+"</p>";
         if (parseFloat(sum)>=70) {
-            document.getElementById("gectikaldi").innerHTML='<br><p style="color: #138819;"><i class="fa-solid fa-circle-check"></i> <b>Geçtiniz!</b> Varsa sonraki kurunuzdan, yoksa kendi bölümünüzden devam edeceksiniz.</p><br><p><b>Yeni bir hesaplama yapmak ister misiniz?</b></p><br><button class="btn" onClick="window.location.reload();">BURAYA TIKLAYIN</button>';
+            document.getElementById("gectikaldi").innerHTML='<br><p style="color: #138819;"><i class="fa-solid fa-circle-check"></i> <b>Geçtiniz!</b> Varsa sonraki kurunuzdan, yoksa kendi bölümünüzden devam edeceksiniz.</p><br><p><b>Yeni bir hesaplama yapmak ister misiniz?</b></p><br><button class="btn" onclick="window.location.reload();">BURAYA TIKLAYIN</button>';
         } else {
-            document.getElementById("gectikaldi").innerHTML='<br><p style="color: #b90d0d;"><i class="fa-solid fa-circle-xmark"></i> <b>Kaldınız.</b> Kur tekrarı yapmanız gerek.</p><br><p><b>Yeni bir hesaplama yapmak ister misiniz?</b></p><br><button class="btn" onClick="window.location.reload();">BURAYA TIKLAYIN</button><hr class="spr-btn">';
+            document.getElementById("gectikaldi").innerHTML='<br><p style="color: #b90d0d;"><i class="fa-solid fa-circle-xmark"></i> <b>Kaldınız.</b> Kur tekrarı yapmanız gerek.</p><br><p><b>Yeni bir hesaplama yapmak ister misiniz?</b></p><br><button class="btn" onclick="window.location.reload();">BURAYA TIKLAYIN</button><hr class="spr-btn">';
         }
     } else {
-        document.getElementById("summary").innerHTML='<p style="color: #e4860a;"><i class="fa-solid fa-circle-exclamation"></i> <b>Tüm bölümleri doldurmanız gerek.</b></p>';
+        document.getElementById("summary").innerHTML='<p style="color: #e4860a;"><i class="fa-solid fa-circle-exclamation"></i> <b>Lütfen tüm bölümleri doğru şekilde doldurunuz!</b></p>';
         document.getElementById("gectikaldi").innerHTML="";
     }
 }

@@ -24,12 +24,17 @@ body {
 }
 
 header {
-    display: flex;
-    top: 0;
     background-color: #081a24;
-    padding: 20px 350px;
-    justify-content: space-between;
     font-size: 18px;
+    padding: 20px 0;
+}
+
+.header-elements {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 30px);
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* .sticky-hdr {
@@ -43,6 +48,7 @@ header a {
     color: #dcdcdc;
     transition: 0.2s;
     align-self: center;
+    
 }
 
 header a.logo {
@@ -88,8 +94,9 @@ header nav a:hover {
 }
 
 .content {
-    margin: 40px 350px;
-    transition: 0.2s;
+    width: calc(100% - 30px);
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
@@ -123,13 +130,32 @@ input[type="number"] {
     transition: 0.2s;
 }
 
-.success {
+/* .success {
     color: #fff;
     width: 100%;
     background-color: #138819;
     margin-bottom: 20px;
     border-radius: 10px;
     padding: 10px 20px;
+} */
+
+.block-warning {
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.block-warning i.fa-solid {
+    flex: 0 0 20px;
+    margin-right: 10px;
+}
+
+.block-warning.success {
+    background-color: #138819;
+    color: #fff;
 }
 
 .btn {
@@ -247,39 +273,27 @@ footer .copyright a:hover {
 }
 
 @media screen and (max-width: 1670px) {
-    header {
+    /* header {
         padding: 20px 250px;
-    }
-    .content {
-        margin: 40px 250px;
-    }
+    } */
 }
 
 @media screen and (max-width: 1500px) {
-    header {
+    /* header {
         padding: 20px 150px;
-    }
-    .content {
-        margin: 40px 150px;
-    }
+    } */
 }
 
 @media screen and (max-width: 1300px) {
-    header {
+    /* header {
         padding: 20px 70px;
-    }
-    .content {
-        margin: 40px 70px;
-    }
+    } */
 }
 
 @media screen and (max-width: 1000px) {
-    header {
+    /* header {
         padding: 20px 15px;
-    }
-    .content {
-        margin: 40px 15px;
-    }
+    } */
 
     input[type="number"] {
         width: 100%;
