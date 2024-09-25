@@ -158,6 +158,24 @@ input[type="number"] {
     color: #fff;
 }
 
+.block-warning.exclamation {
+    background-color: #d87e09;
+    color: #fff;
+}
+
+.block-warning a {
+    color: #dcdcdc !important;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+    transition: 0.2s;
+}
+
+.block-warning a:hover {
+    color: #fff !important;
+    background-color: #00000000;
+}
+
 .btn {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
