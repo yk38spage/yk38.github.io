@@ -15,9 +15,8 @@ function hesap() {
     var q2=document.getElementById("quiz2").value;
     var q3=document.getElementById("quiz3").value;
     var q4=document.getElementById("quiz4").value;
-    var q5=document.getElementById("quiz5").value;
 
-    var qsonuc=(parseFloat(q1)+parseFloat(q2)+parseFloat(q3)+parseFloat(q4)+parseFloat(q5))/5;
+    var qsonuc=(parseFloat(q1)+parseFloat(q2)+parseFloat(q3)+parseFloat(q4))/4;
 
     var w=(document.getElementById("writ").value)/10;
     var icp=(document.getElementById("perf").value)/20;
